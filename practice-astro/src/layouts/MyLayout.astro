@@ -1,0 +1,48 @@
+---
+const { title } = Astro.props;
+const date = new Date().toLocaleDateString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Astro Practice</title>
+  </head>
+  <body class="overflow-x-hidden">
+    <slot />
+    <p id="date">{date} - BR7FORLIFE</p>
+  </body>
+</html>
+
+<style>
+  @import "tailwindcss";
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url("https://i.pinimg.com/736x/e2/f9/31/e2f931b19ed72d82e04f6d0aaf9d98e4.jpg");
+  }
+
+  #date {
+    bottom: 10px;
+    left: 10px;
+    position: fixed;
+    font-size: 15px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 600;
+    color:white;
+  }
+</style>

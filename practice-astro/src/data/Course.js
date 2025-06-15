@@ -1,0 +1,68 @@
+export const courses = [
+  {
+    id: 1,
+    titulo: "JavaScript desde cero",
+    descripcion: "Domina los fundamentos del lenguaje más usado en la web.",
+    nivel: "Principiante",
+    duracion: "4 semanas",
+    imagen: "https://i.pinimg.com/736x/65/c6/ea/65c6ea43ceb18ecb507d0182f3b78fea.jpg",
+  },
+  {
+    id: 2,
+    titulo: "HTML y CSS Moderno",
+    descripcion: "Aprende a crear sitios responsivos con buenas prácticas.",
+    nivel: "Principiante",
+    duracion: "3 semanas",
+    imagen: "https://i.pinimg.com/736x/ce/30/f4/ce30f4c25c262e3d0d99688607edce65.jpg",
+  },
+  {
+    id: 3,
+    titulo: "TypeScript Profesional",
+    descripcion:
+      "Mejora tus proyectos con tipado fuerte y desarrollo escalable.",
+    nivel: "Intermedio",
+    duracion: "5 semanas",
+    imagen: "https://i.pinimg.com/736x/be/e3/58/bee358369a34c7df297a84dc247512d6.jpg",
+  },
+  {
+    id: 4,
+    titulo: "React y Componentes",
+    descripcion: "Construye aplicaciones reactivas y modulares con React.",
+    nivel: "Intermedio",
+    duracion: "6 semanas",
+    imagen: "https://i.pinimg.com/736x/fc/97/4f/fc974f1f07303a84467b37e0da647ff7.jpg",
+  },
+  {
+    id: 5,
+    titulo: "Diseño UX/UI",
+    descripcion: "Crea interfaces intuitivas que enamoran a tus usuarios.",
+    nivel: "Todos los niveles",
+    duracion: "4 semanas",
+    imagen: "https://i.pinimg.com/736x/22/5f/15/225f15de7193fd198d3bd71b23102505.jpg",
+  },
+  {
+    id: 6,
+    titulo: "Tailwind CSS en la práctica",
+    descripcion: "Diseña interfaces modernas de forma rápida y responsiva.",
+    nivel: "Intermedio",
+    duracion: "2 semanas",
+    imagen: "https://i.pinimg.com/736x/33/fe/cc/33feccd7d1647eb47083d78a334c4183.jpg",
+  },
+  {
+    id: 7,
+    titulo: "Backend con Node.js",
+    descripcion: "Construye APIs robustas con JavaScript en el servidor.",
+    nivel: "Avanzado",
+    duracion: "6 semanas",
+    imagen: "https://i.pinimg.com/736x/f3/4a/02/f34a0218dd2e38726c52ac763df55fa7.jpg",
+  },
+  {
+    id: 8,
+    titulo: "Fullstack con MERN",
+    descripcion:
+      "Desarrolla proyectos reales usando Mongo, Express, React y Node.",
+    nivel: "Avanzado",
+    duracion: "8 semanas",
+    imagen: "https://i.pinimg.com/736x/06/3c/2f/063c2ff6046ebc2022c55d1e4bfb6368.jpg",
+  },
+];

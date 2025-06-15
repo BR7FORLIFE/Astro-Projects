@@ -1,0 +1,19 @@
+---
+import MyLayout from "../layouts/MyLayout.astro";
+import Hero from "../sections/Hero.astro";
+import CourseCard from "../sections/CourseCard.astro";
+import FilterCategory from "../sections/FilterCategory.astro";
+import Products from "../sections/Products.astro";
+import Testify from "../sections/Testify.astro";
+import Course from "./Course.astro";
+---
+
+<MyLayout>
+  <FilterCategory/>
+  <Hero
+    title="Bienvenido a tu sitio favorito de cursos"
+    description="¡Este es una web que recopila los cursos efectivos sobre el maravilloso mundo de la programación!"
+    image="https://i.pinimg.com/736x/50/00/e7/5000e7d7efdb6dbef2f7003a25ad7257.jpg"
+  />
+  <CourseCard />
+</MyLayout>
