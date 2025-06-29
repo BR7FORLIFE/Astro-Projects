@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Website Clone</title>
+  </head>
+  <body  class="overflow-x-hidden">
+    <slot />
+  </body >
+
+  <style>
+    @import "tailwindcss";
+
+    :root {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100vw;
+      height: auto;
+      background-image: url("public/bg-total.avif");
+      background-size: cover;
+    }
+  </style>
+</html>
