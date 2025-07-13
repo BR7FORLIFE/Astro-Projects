@@ -4,9 +4,15 @@ import SearchTitle from "../components/SearchTitle.astro";
 import Dashboard from "../components/Dashboard.astro";
 import Metrics from "../components/Metrics.astro";
 import Perfil from "../components/Perfil.astro";
+import Navigator from "../components/Navigator.astro";
 ---
 
 <Layout>
+  <div>
+    <aside class="w-auto h-full mt-9">
+      <Navigator/>
+    </aside>
+  </div>
   <div>
     <header>
       <SearchTitle />
