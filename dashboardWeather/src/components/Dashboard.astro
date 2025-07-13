@@ -1,0 +1,60 @@
+---
+interface Info {
+  title: string;
+  paragraph: string;
+  mount: number;
+  value: number;
+  color:string;
+}
+
+const info: Info[] = [
+  {
+    title: 'Total Income',
+    paragraph: 'During last month',
+    mount: 1200,
+    value: 0,
+    color: "border-purple-400"
+  },
+  {
+    title: 'Total Expense', 
+    paragraph: 'During last 2 months',
+    mount: 4500,
+    value: 0,
+    color: "border-red-500"
+  },
+  {
+    title: 'Total Bonus',
+    paragraph: 'During last 6 months',
+    mount: 6100,
+    value: 0,
+    color: "border-green-400"
+  }
+];
+
+const mountMaximus = 10000;
+---
+<section class="size-auto px-12 py-6 flex flex-row justify-center items-center gap-12 mt-12 text-white rounded-3xl bg-gray-800 border-2 border-white">
+  {
+    info.map(({ title, paragraph, mount , color}) => {
+      const progress = (mount / mountMaximus) * 100;
+      const angle = (360 * progress) / 100;
+
+      return (
+        <div class="inline-flex flex-col justify-center items-center">
+          <h4 class="text-sm self-baseline text-gray-400 font-mono font-bold tracking-tight">{title}</h4>
+          <section class="inline-flex items-center justify-center gap-5">
+            <span class="text-xl text-white font-mono font-bold">${mount}</span>
+            <div class="relative w-12 h-12">
+              <div class="absolute inset-0 rounded-full border-4 border-gray-700"></div>
+              <div
+                class={`absolute inset-0 rounded-full border-4 ${color} border-b-transparent border-l-transparent`}
+                style={`transform: rotate(${angle}deg);`}
+              ></div>
+            </div>
+          </section>
+          <p class="text-[12px] text-gray-300 font-mono font-bold">{paragraph}</p>
+        </div>
+      );
+    })
+  }
+</section>

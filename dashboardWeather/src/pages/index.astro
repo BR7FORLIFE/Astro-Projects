@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SearchTitle from "../components/SearchTitle.astro";
+import Dashboard from "../components/Dashboard.astro";
+import Metrics from "../components/Metrics.astro";
+import Perfil from "../components/Perfil.astro";
+---
+
+<Layout>
+  <div>
+    <header>
+      <SearchTitle />
+    </header>
+    <main>
+      <Dashboard />
+      <Metrics />
+    </main>
+  </div>
+  
+  <div class="mt-8">
+    <aside>
+      <Perfil />
+    </aside>
+  </div>
+</Layout>

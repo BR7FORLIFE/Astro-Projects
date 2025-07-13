@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Dashboard Weather</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style>
+  :root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100dvw;
+    height: 100dvh;
+  }
+
+  html,
+  body {
+    width: auto;
+    height: auto;
+	  background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    color: white;
+    gap: 40px;
+  }
+</style>

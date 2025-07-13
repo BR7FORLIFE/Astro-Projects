@@ -1,0 +1,64 @@
+---
+    interface Contanct{
+        imageUrl: string;
+        alt: string;
+    }
+
+    interface FriendsContact{
+        avatar: string;
+        name: string;
+        occupation: string;
+        atConection: string;
+    }
+
+    const personalAvatar = "https://static.vecteezy.com/system/resources/previews/048/216/761/non_2x/modern-male-avatar-with-black-hair-and-hoodie-illustration-free-png.png"
+
+    const infoContact: Contanct[] = [
+        {imageUrl: "https://cdn-icons-png.freepik.com/512/6995/6995660.png", alt: "imagen de un chat"},
+        {imageUrl: "https://images.vexels.com/media/users/3/205950/isolated/preview/6fbc93ab8efc8497ef9ad1f7c815dd33-icono-de-trazo-de-calendario.png", alt: "imagen de un calendario"},
+        {imageUrl: "https://png.pngtree.com/png-clipart/20231230/original/pngtree-3d-message-notification-icon-png-image_13975711.png", alt: "imagen de las notificaciones"}
+    ]
+
+    const friends: FriendsContact[] = [
+        {avatar: "https://images.icon-icons.com/2643/PNG/512/female_woman_person_people_avatar_user_white_tone_icon_159359.png", name: "Lucia Martinez", occupation: "Backend Developer", atConection: "5 Mins ago"},
+        {avatar: "https://www.pngarts.com/files/5/User-Avatar-PNG-Transparent-Image.png", name: "Mike Hoston", occupation: "Senior Quality", atConection: "1 Hour ago"},
+        {avatar: "https://www.pngarts.com/files/5/Avatar-Face-Transparent.png", name: "Pedro Garcia", occupation: "Frontend Developer", atConection: "2 Days ago"}
+    ]
+---
+
+<section class="w-auto h-full flex flex-col items-center justify-center p-10 border-2 rounded-xl border-white">
+    <div class="flex flex-col items-center justify-center">
+        <img src=`${personalAvatar}` alt="avatar del usuario" class="size-14 bg-green-200 rounded-full p-2">
+        <h3 class="mt-2 font-bold text-gray-300 text-lg">Ghulam</h3>
+        <span class="text-[10px] text-gray-300">Product Designer</span>
+    </div>
+
+    <section class="flex flex-row mt-2 gap-5">
+        {infoContact.map(({imageUrl, alt}) => {
+            return (
+                <div>
+                    <img src=`${imageUrl}` alt=`${alt}` class="size-10 bg-white rounded-full p-2">
+                </div>
+            )
+        })}
+    </section>
+
+    <articl class="mt-5">
+        <h1 class="font-mono font-semibold text-gray-400">Recent Activities</h1>
+        <span class="text-[10px] font-mono">02 Mar 2021</span>
+        <div>
+            {friends.map(({avatar, name, occupation, atConection}) => {
+                return (
+                    <section class="flex flex-row gap-2 justify-start items-center mt-2">
+                        <div><img src=`${avatar}` alt="avatares de los usuarios" class="size-10 object-cover"></div>
+                        <div class="inline-flex flex-col">
+                            <h5 class="text-[12px] text-white font-mono font-bold">{name}</h5>
+                            <p class="text-[9px] font-mono font-bold text-gray-400">{occupation}</p> 
+                            <span class="text-[8px] text-gray-400 font-mono font-bold">{atConection}</span>
+                        </div>
+                    </section>
+                )
+            })}
+        </div>
+    </article>
+</section>
