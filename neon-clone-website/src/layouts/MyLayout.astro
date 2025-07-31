@@ -4,26 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Neon Website Clone</title>
+    <link rel="stylesheet" href="/src/styles/global.css">
   </head>
-  <body  class="overflow-x-hidden">
+  <body class="overflow-x-hidden">
     <slot />
-  </body >
+  </body>
 
   <style>
-    @import "tailwindcss";
-
-    :root {
-      padding: 0px;
-      margin: 0px;
+    * {
+      padding: 0;
+      margin: 0;
       box-sizing: border-box;
     }
 
     html,
     body {
       width: 100vw;
-      height: auto;
-      background-image: url("public/bg-total.avif");
+      height: 100%;
+      background-image: url("/bg-total.avif"); /* 🔧 corregida */
       background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      color: white;
     }
   </style>
 </html>

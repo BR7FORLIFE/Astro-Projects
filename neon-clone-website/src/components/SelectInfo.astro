@@ -1,0 +1,46 @@
+---
+import type { BasicInfo } from "@/types/Product.ts";
+
+interface Props {
+  name: string;
+  placeholder: string[];
+  products: BasicInfo[];
+}
+
+const { name, placeholder, products } = Astro.props as Props;
+---
+
+<section>
+  <div
+    class="inline-flex flex-row-reverse justify-center items-center relative group"
+  >
+    <img src="./triangule.png" alt="triangule icon" class="size-5" /><span
+      class="font-mono font-medium text-white/90">{name}</span
+    >
+
+    <article
+      class="w-auto absolute bg-transparent border-2 border-gray-700 p-4 group-hover:block top-8"
+    >
+      <section class="inline-flex flex-col gap-4">
+        <span class="uppercase text-xs text-white/80">{placeholder[0]}</span>
+        {
+          products.map(({ title, description, image }, index) => {
+            return (
+              <article class="flex flex-row gap-4 mb-3 items-center justify-center">
+                <picture class="size-12 flex bg-white/90 justify-center items-center p-2 rounded-lg">
+                  <img src={image} alt="images" class="size-10 bg-cover" />
+                </picture>
+                <div class="inline-flex flex-col">
+                  <span class="text-[16px] font-semibold text-white/90">
+                    {title}
+                  </span>
+                  <p class="text-[12px] text-white/70">{description}</p>
+                </div>
+              </article>
+            );
+          })
+        }
+      </section>
+    </article>
+  </div>
+</section>

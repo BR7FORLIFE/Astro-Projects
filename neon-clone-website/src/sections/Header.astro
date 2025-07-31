@@ -1,25 +1,35 @@
 ---
-import DiscordLogo from "../assets/DiscordLogo.svg";
-import GithubLogo from "../assets/GithubLogo.svg";
+import SelectInfo from '../components/SelectInfo.astro'
+import {productsInfoSelectOne, productsInfoSelectTwo, solutionsInfoSelect} from '@/scripts/Products.js'
 
-const liContent = ["Product", "Solutions", "Docs", "Pricing", "Company"];
 ---
 
-<section>
-  <div>
-    <picture><img src="/headerImages/neon-icon.svg" alt="neon icon" /></picture>
-    <nav>
-      <ul class="text-white list-none">
-        {
-          liContent.map((element) => {
-            return <li>{element}</li>;
-          })
-        }
-      </ul>
-    </nav>
-  </div>
-
-  <div>
-    <DiscordLogo/>
-  </div>
-</section>
+<header class="w-full h-auto py-5 px-4 flex flex-col">
+  <section class="relative w-full h-auto mb-5">
+    <div class="w-full h-auto inline-flex justify-center items-center gap-3">
+      <picture class="absolute w-full"
+        ><img
+          src="./headerimage.svg"
+          alt="background for the secction"
+          class="w-full h-8 bg-cover"
+        /></picture
+      >
+      <span class="text-white text-center text-sm font-mono font-medium"
+        >You can build Laravel apps from a prompt using app.build, our open -
+        source full - stack agent</span
+      >
+      <img
+        src="./triangule.png"
+        alt="triangule icon"
+        class="size-5 transform rotate-270"
+      />
+    </div>
+  </section>
+  <section class="flex flex-row gap-20 items-center">
+    <picture class="size-auto ml-12"
+      ><img src="neon-icon.svg" alt="neon icon" /></picture
+    >
+    <SelectInfo name='products' placeholder={['DATABASE']} products={productsInfoSelectOne}/>
+  </section>
+  <nav></nav>
+</header>
