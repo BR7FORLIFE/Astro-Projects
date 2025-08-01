@@ -1,7 +1,11 @@
 ---
-import SelectInfo from '../components/SelectInfo.astro'
-import {productsInfoSelectOne, productsInfoSelectTwo, solutionsInfoSelect} from '@/scripts/Products.js'
+import SelectInfo from "@/components/header/SelectInfo.astro";
 
+import {
+  productsInfoSelectOne,
+  productsInfoSelectTwo,
+  solutionsInfoSelect,
+} from "@/scripts/Products.js";
 ---
 
 <header class="w-full h-auto py-5 px-4 flex flex-col">
@@ -29,7 +33,11 @@ import {productsInfoSelectOne, productsInfoSelectTwo, solutionsInfoSelect} from 
     <picture class="size-auto ml-12"
       ><img src="neon-icon.svg" alt="neon icon" /></picture
     >
-    <SelectInfo name='products' placeholder={['DATABASE']} products={productsInfoSelectOne}/>
+    <SelectInfo
+      name="Products"
+      placeholders={["DATABASE", "ECOSYSTEM"]}
+      products={[productsInfoSelectOne, productsInfoSelectTwo]}
+    />
   </section>
   <nav></nav>
 </header>
