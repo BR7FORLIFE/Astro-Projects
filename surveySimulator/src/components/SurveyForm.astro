@@ -1,0 +1,46 @@
+---
+  import SurveyDashboard from "./SurveyDashboard.astro"
+
+  
+---
+<section class="flex flex-row justify-center items-center gap-4">
+  <form>
+    <fieldset>
+      <legend>Encuesta tecnológica</legend>
+
+      <p>1. ¿Te gustan los lenguajes de tipado dinámico como JavaScript o Python?</p>
+      <label><input type="radio" name="tipado" value="yes" /> <span>Sí</span></label>
+      <label><input type="radio" name="tipado" value="no" /> <span>No</span></label>
+
+      <p>2. ¿Qué lenguajes usas frecuentemente?</p>
+      <label><input type="checkbox" name="lenguajes" value="js" /> JavaScript</label>
+      <label><input type="checkbox" name="lenguajes" value="py" /> Python</label>
+      <label><input type="checkbox" name="lenguajes" value="ts" /> TypeScript</label>
+      <label><input type="checkbox" name="lenguajes" value="java" /> Java</label>
+
+      <p>3. ¿Cuál es tu lenguaje favorito y por qué?</p>
+      <textarea name="explicacion" rows="4" cols="40" placeholder="Escribe aquí..."></textarea>
+
+      <p>4. ¿Cuál es tu editor de código principal?</p>
+      <select name="editor">
+        <option value="vscode">Visual Studio Code</option>
+        <option value="sublime">Sublime Text</option>
+        <option value="vim">Vim</option>
+        <option value="otro">Otro</option>
+      </select>
+
+      <p>5. ¿Qué tanto disfrutas programar (0 a 10)?</p>
+      <input type="range" name="satisfaccion" min="0" max="10" />
+
+      <p>6. ¿Cuándo empezaste a programar?</p>
+      <input type="date" name="fecha-inicio" />
+
+      <p>7. ¿Cuál es tu correo electrónico?</p>
+      <input type="email" name="email" placeholder="tucorreo@ejemplo.com" />
+
+      <p><button type="submit">Enviar encuesta</button></p>
+    </fieldset>
+  </form>
+
+  <SurveyDashboard />
+</section>

@@ -4,11 +4,11 @@ import SelectInfo from "@/components/header/SelectInfo.astro";
 import {
   productsInfoSelectOne,
   productsInfoSelectTwo,
-  solutionsInfoSelect,
+  solutionsInfoSelectOne,
 } from "@/scripts/Products.js";
 ---
 
-<header class="w-full h-auto py-5 px-4 flex flex-col">
+<header class="w-full h-auto py-3 px-4 flex flex-col">
   <section class="relative w-full h-auto mb-5">
     <div class="w-full h-auto inline-flex justify-center items-center gap-3">
       <picture class="absolute w-full"
@@ -29,6 +29,7 @@ import {
       />
     </div>
   </section>
+
   <section class="flex flex-row gap-20 items-center">
     <picture class="size-auto ml-12"
       ><img src="neon-icon.svg" alt="neon icon" /></picture
@@ -37,6 +38,12 @@ import {
       name="Products"
       placeholders={["DATABASE", "ECOSYSTEM"]}
       products={[productsInfoSelectOne, productsInfoSelectTwo]}
+    />
+
+    <SelectInfo 
+      name="Solutions"
+      placeholders={["USE CASE", "FOR TEAMS"]}
+      products={[productsInfoSelectOne]}
     />
   </section>
   <nav></nav>

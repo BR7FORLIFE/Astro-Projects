@@ -1,0 +1,49 @@
+---
+interface FuntionWidget {
+  name: string;
+  imageUrl: string;
+}
+
+interface NameWidget {
+  reloj: FuntionWidget;
+  quotes: FuntionWidget;
+  notes: FuntionWidget;
+  recordatory: FuntionWidget;
+  links: FuntionWidget;
+}
+
+const widget: NameWidget[] = [
+  {
+    reloj: {
+      imageUrl: "",
+      name: "Reloj",
+    },
+    quotes: {
+      imageUrl: "",
+      name: "Quotes",
+    },
+    notes: {
+      imageUrl: "",
+      name: "Notes",
+    },
+    recordatory: {
+      imageUrl: "",
+      name: "Recordatory",
+    },
+    links: {
+      imageUrl: "",
+      name: "Links",
+    },
+  },
+];
+---
+
+<section>
+  {widget.map(({reloj, quotes, notes, recordatory, links}) => {
+    return ( 
+       <div>
+            
+       </div>
+    )
+  })}
+</section>

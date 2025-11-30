@@ -54,33 +54,37 @@ const productsInfoSelectTwo = [
   },
 ];
 
-const solutionsInfoSelect = [
-  { image: "", description: "Autoscale with traffic", title: "Serveless Apps" },
-  { image: "", description: "Scale & restore instantly", title: "Multi-TB" },
+const solutionsInfoSelectOne = [
   {
-    image: "",
+    image: "src/assets/headerSelect/servelessApps.svg",
+    description: "Autoscale with traffic",
+    title: "Serveless Apps",
+  },
+  {
+    image: "src/assets/headerSelect/multitb.svg",
+    description: "Scale & restore instantly",
+    title: "Multi-TB",
+  },
+  {
+    image: "src/assets/headerSelect/databasePerTenant.svg",
     description: "Data isolation without overhead",
     title: "Database per Tenant",
   },
   {
-    image: "",
+    image: "src/assets/headerSelect/platforms.svg",
     description: "Ofter Postgres to your users",
     title: "Platforms",
   },
   {
-    image: "",
+    image: "src/assets/headerSelect/devTest.svg",
     description: "Production-like enviroments",
     title: "Dev / Test",
   },
-  { image: "", description: "Deploy Postgres via AI agents", title: "Agents" },
-  { image: "", description: "Scale & grow", title: "Enterprise" },
-  { image: "", description: "Build with Neon", title: "Startups" },
-  { image: "", description: "Compliance & privacy", title: "Security" },
-  { image: "", description: "Explore customer stories", title: "Case studies" },
+  {
+    image: "src/assets/headerSelect/agents.svg",
+    description: "Deploy Postgres via AI agents",
+    title: "Agents",
+  },
 ];
 
-export {
-    productsInfoSelectOne,
-    productsInfoSelectTwo,
-    solutionsInfoSelect
-}
+export { productsInfoSelectOne, productsInfoSelectTwo, solutionsInfoSelectOne };
