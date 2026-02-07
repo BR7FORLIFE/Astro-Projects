@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+import logo from "../../assets/images/header/logo.webp";
+import inputLogo from "../../assets/images/header/input-logo.svg";
+---
+
+<section class="w-full">
+  <Image
+    src={logo}
+    alt="logo"
+    widths={[400, 800, 1200]}
+    sizes="(max-width: 768px) 100vw, 800px"
+  />
+  <div>
+    <input type="text" class="" />
+    <button></button>
+    <a href="">
+      <Image
+        src={inputLogo}
+        alt="input logo"
+        widths={[400, 800, 1200]}
+        sizes="(max-width:50px) 100dvw 800px"
+      />
+    </a>
+  </div>
+  <div></div>
+</section>
