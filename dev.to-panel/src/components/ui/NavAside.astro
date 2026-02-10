@@ -1,0 +1,99 @@
+---
+import { Image } from "astro:assets";
+
+interface Info {
+  imageUrl: string;
+  slug: string;
+}
+
+const info: Info[] = [
+  {
+    imageUrl: "src/assets/images/nav-aside/devc++.svg",
+    slug: "DEV++",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/video.svg",
+    slug: "Videos",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/dev-education.svg",
+    slug: "DEV Education Tracks",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/dev-challenge.svg",
+    slug: "DEV Challenges",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/dev-help.svg",
+    slug: "DEV Help",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/advertise.svg",
+    slug: "Advertise on DEV",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/organization.svg",
+    slug: "Organization Accounts",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/dev-showcase.svg",
+    slug: "DEV Showcase",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/about.svg",
+    slug: "About",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/contact.svg",
+    slug: "Contact",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/postgres.svg",
+    slug: "Free Postgres Database",
+  },
+  {
+    imageUrl: "src/assets/images/nav-aside/shop.svg",
+    slug: "Forem Shop",
+  },
+];
+---
+
+<aside class="w-1/5 flex flex-col justify-end gap-8">
+  <article class="w-54 bg-white text-black rounded-lg p-4">
+    <div class="w-full">
+      <h2 class="text-sm font-semibold text-black">
+        DEV Community is a community of 3,756,551 amazing developers
+      </h2>
+      <p class="text-neutral-600 mt-4">
+        We're a place where coders share, stay up-to-date and grow thir carrers
+      </p>
+      <div class="flex flex-col justify-center items-center mt-3 gap-2">
+        <button
+          class="border-2 border-[#5900e1] px-4 py-2 text-[#5900e1] rounded-lg"
+          >Create account</button
+        >
+        <button class="text-neutral-500">Log in</button>
+      </div>
+    </div>
+  </article>
+  <article class="">
+    <nav>
+      <ul class="flex flex-col gap-1">
+        {
+          info.map(({ imageUrl, slug }) => {
+            return (
+              <li class="flex justify-start items-center gap-2">
+                <img
+                  src={imageUrl}
+                  alt="nav icon"
+                  class="w-5 h-auto object-contain"
+                />
+                <a class="text-sm text-neutral-600 underline">{slug}</a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </nav>
+  </article>
+</aside>
