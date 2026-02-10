@@ -1,17 +1,24 @@
 ---
 const { title } = Astro.props;
 import Header from "../components/ui/Header.astro";
+import NavAside from "../components/ui/NavAside.astro";
+import LiveStreamAside from "../components/ui/LiveStreamAside.astro";
+import Footer from "../components/ui/Footer.astro";
 ---
 
 <html>
   <head>
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-[#f6f6f6]">
     <Header />
-    <main>
-      <slot />
-    </main>
-    <footer></footer>
+    <section class="flex w-dvw mt-6 justify-center gap-8">
+      <NavAside />
+      <main class="w-2/5">
+        <slot />
+      </main>
+      <LiveStreamAside />
+    </section>
+    <Footer />
   </body>
 </html>
