@@ -2,26 +2,39 @@
 import { Image } from "astro:assets";
 import logo from "../../assets/images/header/logo.webp";
 import inputLogo from "../../assets/images/header/input-logo.svg";
+import search from "../../assets/images/header/search.png";
 ---
 
-<section class="w-full">
-  <Image
-    src={logo}
-    alt="logo"
-    widths={[400, 800, 1200]}
-    sizes="(max-width: 768px) 100vw, 800px"
-  />
-  <div>
-    <input type="text" class="" />
-    <button></button>
-    <a href="">
-      <Image
-        src={inputLogo}
-        alt="input logo"
-        widths={[400, 800, 1200]}
-        sizes="(max-width:50px) 100dvw 800px"
+<header class="w-dvw flex justify-around bg-white h-16 items-center">
+  <!--seccion izquierda del header -->
+  <section class="inline-flex justify-center items-center gap-6">
+    <!--logo de la pagina -->
+    <Image src={logo} alt="logo" width="52" height="24" />
+
+    <!--input -->
+    <div class="relative h-12 flex justify-center items-center">
+      <button class="absolute left-0">
+        <Image src={search} width="32" alt="search icon" />
+      </button>
+      <a href="" class="absolute right-2 z-10">
+        <Image src={inputLogo} alt="input logo" width="24" />
+      </a>
+      <input
+        type="text"
+        class="w-full md:w-172 h-10 border-2 rounded-lg border-neutral-300 text-sm pl-10"
+        name="input"
+        placeholder="Search..."
       />
-    </a>
-  </div>
-  <div></div>
-</section>
+    </div>
+  </section>
+
+  <!--seccion derecha del header -->
+  <section class="flex gap-4">
+    <button class="text-neutral-500 text-sm"> Log In </button>
+    <button
+      class="border-2 border-purple-900 rounded-lg px-3 py-2 text-purple-900 text-sm"
+    >
+      Create account
+    </button>
+  </section>
+</header>
