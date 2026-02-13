@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+
+//generamos las rutas estaticas para inyectar las paginas
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<h1>{post.data.title}</h1>
+<p>{post.data.description}</p>
+
+<article>
+  {post.body}
+</article>
