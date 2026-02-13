@@ -1,19 +1,109 @@
 ---
+interface EventSchedule {
+  hour: string;
+  link: string;
+}
 
+interface Streams {
+  date: string;
+  event: EventSchedule[];
+}
+
+const streams: Streams[] = [
+  {
+    date: "Febrary 12",
+    event: [
+      {
+        hour: "2 PM ET",
+        link: "Open Source Ready Live",
+      },
+    ],
+  },
+  {
+    date: "Febrary 10",
+    event: [
+      {
+        hour: "11 AM ET",
+        link: "AW Security Live",
+      },
+      {
+        hour: "12 PM ET",
+        link: "Google Cloud Live: Getting Started with Gemini CLI",
+      },
+      {
+        hour: "1PM ET",
+        link: "Observing and Debugging Next JS apps with Sentry: A Hands-on Sessions",
+      },
+    ],
+  },
+];
 ---
 
 <aside class="w-1/5">
   <article>
-    <div class="w-full flex justify-between">
+    <div class="relative w-full flex justify-between">
       <h5>What's happening this week :=0</h5>
-      <details>
+      <details class="absolute right-0">
         <summary> ... </summary>
-        <ul></ul>
+        <ul>
+          {
+            [
+              {
+                img: "src/assets/images/livestream/info.svg",
+                text: "What's a billboard?",
+              },
+              {
+                img: "src/assets/images/livestream/settings.svg",
+                text: "Manage preferences",
+              },
+            ].map(({ img, text }) => {
+              return (
+                <li class="flex justify-start items-center gap-3">
+                  <img src={img} alt="info icons" />
+                  <span>{text}</span>
+                </li>
+              );
+            })
+          }
+          <div class="w-full border-2 border-neutral-500"></div>
+          <li class="flex justify-start items-center gap-3">
+            <img
+              src="src/assets/images/livestream/report.svg"
+              alt="report icon"
+            />
+            <span>Report the billboard</span>
+          </li>
+        </ul>
       </details>
     </div>
-    <section>
-      <h3></h3>
-      <div></div>
+    <section class="mt-6 flex flex-col gap-4 p-3 rounded-xl border-2">
+      <h3>Livestreams 🎥</h3>
+      <article class="flex flex-col gap-5">
+        {
+          streams.map(({ date, event }) => {
+            return (
+              <div class="flex flex-col gap-3">
+                <span class="text-black font-semibold">{date}</span>
+                <ul>
+                  {event.map(({ hour, link }) => {
+                    return (
+                      <li class="mb-2 text-neutral-900">
+                        {hour}:
+                        <a href="#" class="text-blue-500 underline">
+                          {link}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })
+        }
+        <span class="text-neutral-600 italic"
+          >Click the licnk above or view directly from the DEV Homepage!</span
+        >
+      </article>
     </section>
   </article>
 </aside>
